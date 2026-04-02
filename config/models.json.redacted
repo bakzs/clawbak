@@ -1,0 +1,61 @@
+{
+  "providers": {
+    "openrouter": {
+      "api": "openai-completions",
+      "apiKey": "__REDACTED__",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "models": [
+        {
+          "contextWindow": 200000,
+          "cost": {
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "input": 0,
+            "output": 0
+          },
+          "id": "auto",
+          "input": [
+            "text",
+            "image"
+          ],
+          "maxTokens": "__REDACTED__",
+          "name": "OpenRouter Auto",
+          "reasoning": false
+        },
+        {
+          "contextWindow": 1048576,
+          "cost": {
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "input": 0,
+            "output": 0
+          },
+          "id": "openrouter/hunter-alpha",
+          "input": [
+            "text"
+          ],
+          "maxTokens": "__REDACTED__",
+          "name": "Hunter Alpha",
+          "reasoning": true
+        },
+        {
+          "contextWindow": 262144,
+          "cost": {
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "input": 0,
+            "output": 0
+          },
+          "id": "openrouter/healer-alpha",
+          "input": [
+            "text",
+            "image"
+          ],
+          "maxTokens": "__REDACTED__",
+          "name": "Healer Alpha",
+          "reasoning": true
+        }
+      ]
+    }
+  }
+}

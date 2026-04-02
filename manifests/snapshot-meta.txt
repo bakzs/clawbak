@@ -1,0 +1,4 @@
+2026-04-02T16:37:36+00:00
+user=usr_13dbakzheeshuen_gmail_com
+host=clawdbot-vm
+snapshot_dir=/home/usr_13dbakzheeshuen_gmail_com/clawbak-snapshot-safe-20260402-163736

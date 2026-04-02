@@ -1,0 +1,26 @@
+[Unit]
+Description=OpenClaw Gateway (v2026.3.13)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/node /home/usr_13dbakzheeshuen_gmail_com/.npm-global/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+TimeoutStartSec=30
+SuccessExitStatus=0 143
+KillMode=control-group
+Environment=ANTHROPIC_API_KEY=__REDACTED__
+Environment=HOME=/home/usr_13dbakzheeshuen_gmail_com
+Environment=TMPDIR=/tmp
+Environment=PATH=/home/usr_13dbakzheeshuen_gmail_com/.local/bin:/home/usr_13dbakzheeshuen_gmail_com/.npm-global/bin:/home/usr_13dbakzheeshuen_gmail_com/bin:/home/usr_13dbakzheeshuen_gmail_com/.volta/bin:/home/usr_13dbakzheeshuen_gmail_com/.asdf/shims:/home/usr_13dbakzheeshuen_gmail_com/.bun/bin:/home/usr_13dbakzheeshuen_gmail_com/.nvm/current/bin:/home/usr_13dbakzheeshuen_gmail_com/.fnm/current/bin:/home/usr_13dbakzheeshuen_gmail_com/.local/share/pnpm:/usr/local/bin:/usr/bin:/bin
+Environment=OPENCLAW_GATEWAY_PORT=18789
+Environment=OPENCLAW_SYSTEMD_UNIT=openclaw-gateway.service
+Environment="OPENCLAW_WINDOWS_TASK_NAME=OpenClaw Gateway"
+Environment=OPENCLAW_SERVICE_MARKER=openclaw
+Environment=OPENCLAW_SERVICE_KIND=gateway
+Environment=OPENCLAW_SERVICE_VERSION=2026.3.13
+
+[Install]
+WantedBy=default.target

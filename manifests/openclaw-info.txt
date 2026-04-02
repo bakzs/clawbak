@@ -1,0 +1,87 @@
+===== openclaw --version =====
+OpenClaw 2026.3.13 (61d171a)
+
+===== openclaw version =====
+error: unknown command 'version'
+(Did you mean sessions?)
+
+===== openclaw doctor =====
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+██░▄▄▄░██░▄▄░██░▄▄▄██░▀██░██░▄▄▀██░████░▄▄▀██░███░██
+██░███░██░▀▀░██░▄▄▄██░█░█░██░█████░████░▀▀░██░█░█░██
+██░▀▀▀░██░█████░▀▀▀██░██▄░██░▀▀▄██░▀▀░█░██░██▄▀▄▀▄██
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+                  🦞 OPENCLAW 🦞                    
+ 
+┌  OpenClaw doctor
+│
+◇  Update ───────────────────────────────────────────────────────────────╮
+│                                                                        │
+│  This install is not a git checkout.                                   │
+│  Run `openclaw update` to update via your package manager (npm/pnpm),  │
+│  then rerun doctor.                                                    │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+│
+◇  Startup optimization ─────────────────────────────────────────────────╮
+│                                                                        │
+│  - NODE_COMPILE_CACHE is not set; repeated CLI runs can be slower on   │
+│    small hosts (Pi/VM).                                                │
+│  - OPENCLAW_NO_RESPAWN is not set to 1; set it to avoid extra startup  │
+│    overhead from self-respawn.                                         │
+│  - Suggested env for low-power hosts:                                  │
+│    export NODE_COMPILE_CACHE=/var/tmp/openclaw-compile-cache           │
+│    mkdir -p /var/tmp/openclaw-compile-cache                            │
+│    export OPENCLAW_NO_RESPAWN=1                                        │
+│                                                                        │
+├────────────────────────────────────────────────────────────────────────╯
+[?25l│
+◆  Archive 4 orphan transcript file(s) in ~/.openclaw/agents/main/sessions?
+│  ○ Yes / ● No
+└
+[999D[4A[1B[J◇  Archive 4 orphan transcript file(s) in ~/.openclaw/agents/main/sessions?
+│  No
+[?25h│
+◇  State integrity ────────────────────────────────────────────────╮
+│                                                                  │
+│  - Found 4 orphan transcript file(s) in                          │
+│    ~/.openclaw/agents/main/sessions. They are not referenced by  │
+│    sessions.json and can consume disk over time.                 │
+│                                                                  │
+├──────────────────────────────────────────────────────────────────╯
+│
+◇  Security ─────────────────────────────────╮
+│                                            │
+│  - No channel security warnings detected.  │
+│  - Run: openclaw security audit --deep     │
+│                                            │
+├────────────────────────────────────────────╯
+│
+◇  Skills status ────────────╮
+│                            │
+│  Eligible: 6               │
+│  Missing requirements: 47  │
+│  Blocked by allowlist: 0   │
+│                            │
+├────────────────────────────╯
+│
+◇  Plugins ──────╮
+│                │
+│  Loaded: 8     │
+│  Disabled: 33  │
+│  Errors: 0     │
+│                │
+├────────────────╯
+Telegram: ok (@bakclawbot) (1009ms)
+Agents: main (default)
+Heartbeat interval: 30m (main)
+Session store (main): /home/usr_13dbakzheeshuen_gmail_com/.openclaw/agents/main/sessions/sessions.json (13 entries)
+- agent:main:main (15m ago)
+- agent:main:cron:18fefca3-7f19-4a5f-bdfd-3f1b5126ad62 (41m ago)
+- agent:main:cron:18fefca3-7f19-4a5f-bdfd-3f1b5126ad62:run:ba4f9e2b-1187-4fb1-b088-cc6233d2dc54 (41m ago)
+- agent:main:telegram:direct:50049212 (41m ago)
+- agent:main:cron:18fefca3-7f19-4a5f-bdfd-3f1b5126ad62:run:78322df6-cecd-417e-82cb-a3bca7521bde (220m ago)
+Run "openclaw doctor --fix" to apply changes.
+│
+└  Doctor complete.
+

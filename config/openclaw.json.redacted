@@ -1,0 +1,146 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "fallbacks": [
+          "openrouter/minimax/minimax-m2.7"
+        ],
+        "primary": "openai-codex/gpt-5.4"
+      },
+      "models": {
+        "anthropic/claude-haiku-4-5": {},
+        "anthropic/claude-opus-4-6": {},
+        "anthropic/claude-sonnet-4-6": {},
+        "google/gemini-3.1-flash-lite-preview": {},
+        "openrouter/minimax/minimax-m2.7": {},
+        "openrouter/z-ai/glm-5": {}
+      },
+      "subagents": {
+        "maxChildrenPerAgent": 5,
+        "maxConcurrent": 8,
+        "maxSpawnDepth": 2,
+        "model": "openrouter/minimax/minimax-m2.7",
+        "runTimeoutSeconds": 900
+      },
+      "workspace": "/home/usr_13dbakzheeshuen_gmail_com/.openclaw/workspace"
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "mode": "api_key",
+        "provider": "anthropic"
+      },
+      "openrouter:default": {
+        "mode": "api_key",
+        "provider": "openrouter"
+      }
+    }
+  },
+  "browser": {
+    "defaultProfile": "openclaw",
+    "enabled": true,
+    "executablePath": "/usr/bin/chromium",
+    "extraArgs": [
+      "--headless=new",
+      "--disable-gpu"
+    ],
+    "headless": true,
+    "noSandbox": true
+  },
+  "channels": {
+    "telegram": {
+      "allowFrom": [
+        "50049212"
+      ],
+      "botToken": "__REDACTED__",
+      "capabilities": {
+        "inlineButtons": "all"
+      },
+      "dmPolicy": "allowlist",
+      "enabled": true,
+      "execApprovals": {
+        "approvers": [
+          50049212
+        ],
+        "enabled": true,
+        "target": "both"
+      },
+      "groupPolicy": "disabled",
+      "streaming": "off"
+    }
+  },
+  "commands": {
+    "bash": true,
+    "config": true,
+    "native": "auto",
+    "nativeSkills": "auto",
+    "ownerDisplay": "raw",
+    "restart": true,
+    "text": true
+  },
+  "env": {
+    "OURA_TOKEN": "__REDACTED__"
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "__REDACTED__"
+    },
+    "bind": "loopback",
+    "mode": "local",
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    },
+    "port": 18789,
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": "__REDACTED__"
+      }
+    }
+  },
+  "meta": {
+    "lastTouchedAt": "2026-03-25T07:59:53.458Z",
+    "lastTouchedVersion": "2026.3.13"
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  },
+  "session": "__REDACTED__",
+  "tools": {
+    "elevated": {
+      "allowFrom": {
+        "telegram": [
+          "tg:50049212"
+        ]
+      },
+      "enabled": true
+    },
+    "profile": "full"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-17T05:41:16.166Z",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local",
+    "lastRunVersion": "2026.3.13"
+  }
+}
